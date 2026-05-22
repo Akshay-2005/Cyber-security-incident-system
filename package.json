@@ -1,0 +1,28 @@
+{
+  "name": "aegis-sentinel-root",
+  "version": "1.0.0",
+  "description": "Enterprise Cyber Security Incident Management System (SOC Platform) with Salesforce integration",
+  "main": "backend/server.js",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "npx concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:frontend": "cd frontend && npm run build",
+    "start:backend": "cd backend && npm start",
+    "start": "npm run start:backend"
+  },
+  "keywords": [
+    "cybersecurity",
+    "soc",
+    "salesforce",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

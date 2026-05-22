@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #030712;
+    background-image: 
+      linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: center;
+  }
+}
+
+@layer components {
+  /* Futuristic HUD Glassmorphism Panels */
+  .cyber-panel {
+    background: rgba(17, 24, 39, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cyber-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.4), transparent);
+  }
+
+  .cyber-panel-glow {
+    border: 1px solid rgba(6, 182, 212, 0.45);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+  }
+
+  /* Neon Cyber buttons */
+  .cyber-btn-primary {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.3) 100%);
+    border: 1px solid #06B6D4;
+    color: #F8FAFC;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.2);
+    text-shadow: 0 0 4px rgba(6, 182, 212, 0.5);
+  }
+
+  .cyber-btn-primary:hover {
+    background: linear-gradient(135deg, #3B82F6 0%, #06B6D4 100%);
+    box-shadow: 0 0 18px rgba(6, 182, 212, 0.55);
+    transform: translateY(-1px);
+  }
+
+  .cyber-btn-secondary {
+    background: rgba(17, 24, 39, 0.7);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    color: #F8FAFC;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .cyber-btn-secondary:hover {
+    border-color: #8B5CF6;
+    background: rgba(139, 92, 246, 0.15);
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.35);
+  }
+
+  .cyber-btn-danger {
+    background: rgba(127, 29, 29, 0.3);
+    border: 1px solid #EF4444;
+    color: #F8FAFC;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-shadow: 0 0 4px rgba(239, 68, 68, 0.4);
+  }
+
+  .cyber-btn-danger:hover {
+    background: #EF4444;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+    color: white;
+  }
+
+  /* Cyber Input Fields */
+  .cyber-input {
+    background: rgba(17, 24, 39, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    color: #F1F5F9;
+    transition: all 0.25s ease;
+  }
+
+  .cyber-input:focus {
+    border-color: #06B6D4;
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.35);
+    outline: none;
+    background: rgba(15, 23, 42, 0.95);
+  }
+}
+
+/* Custom modern cyber scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06B6D4;
+  box-shadow: 0 0 8px #06B6D4;
+}
